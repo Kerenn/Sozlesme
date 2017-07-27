@@ -122,10 +122,7 @@ KİRACI	                                                                        
 			fwrite($myfile, $txt);
 			
 	        fclose($myfile);
-			
-			
-			
-			
+						
 			
 	if(mysqli_query($conn,"INSERT INTO test(evsahibi,evsahibitc,evsahibiadres,kiraci,kiracitc,kiraciadres,kiralananyer,odemeduzeni,baslangic,bitis,kirabedeli,parabirimi,banka,sube,subeno,iban,hesapno,teminat) VALUES ('$evsahibi', '$evsahibitc','$evsahibiadres','$kiraci','$kiracitc','$kiraciadres','$kiralananyer','$odemeduzeni','$baslangic','$bitis','$kirabedeli','$parabirimi','$banka','$sube','$subeno','$iban','$hesapno','$teminat')"))
 	   
@@ -140,12 +137,61 @@ KİRACI	                                                                        
 <html>
 <head>
 <title>Sozlesme Hazir</title>
+<style> 
+body {
+    background-image: url("img_istanbul3.jpg") ;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+</style>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #e84e1b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px #999;
+
+}
+
+.button:hover {background-color: #1d2345}
+
+.button:active {
+  background-color: #1d2345;
+  box-shadow: 0 0px #666;
+  transform: translateY(4px);
+   
+}
+</style>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
+<style>
+h2 {
+    text-align: center;
+	color: #FFFFFF;
+}
+
+</style>
+<h2>Sözleşmen Hazır</h2>
+
 
 <form id="Sozlesme" action="sonuc.php" method="post">
-<a href="sonuc.php">Download </a>
 
 
+
+<div class="w3-center">
+<div class="w3-bar">
+<button class="button">Sözleşmeyi İndir</button>
+</div>
+</div>
 </body>
 </html>
